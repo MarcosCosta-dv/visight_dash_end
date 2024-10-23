@@ -1,0 +1,64 @@
+/* Faz a sidebar ocupar a altura inteira da tela */
+#sidebar {
+    width: 70px;
+    height: 100vh; /* Altura total da tela */
+    transition: width 0.3s ease;
+    position: fixed; /* Fixa a barra na tela */
+    top: 0;
+    left: 0;
+    z-index: 1; /* Define um índice para que o sidebar fique abaixo do botão */
+  }
+  
+  #sidebar.active {
+    width: 200px;
+  }
+  
+  .link-text {
+    display: none;
+    transition: opacity 0.3s ease;
+  }
+  
+  #sidebar.active .link-text {
+    display: inline;
+    opacity: 1;
+  }
+  
+  .nav-link {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-link i {
+    margin-right: 10px;
+  }
+
+  .navbar-nav {
+    margin-top: 70px;
+  }
+  
+  .nav-item {
+    text-align: center;
+  }
+  
+  #sidebar.active .nav-item {
+    text-align: left;
+  }
+  
+  /* Ajusta o conteúdo principal para não ficar por baixo da barra lateral */
+  .flex-grow-1 {
+    margin-left: 70px;
+    transition: margin-left 0.3s ease;
+  }
+  
+  #sidebar.active ~ .flex-grow-1 {
+    margin-left: 200px;
+}
+
+#toggleBtn {
+    background-color: orangered;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 2; /* Garante que o botão fique acima da barra lateral */
+}
