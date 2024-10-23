@@ -45,7 +45,7 @@
   </div>
   
   
-  <main>
+  <main id="mainContent" class="main-content">
     <div  class="grafico">
       <canvas id="chart"></canvas>
     </div>
@@ -86,6 +86,12 @@
         scales: {
           y: {
             beginAtZero: true
+          }
+        },
+        plugins: {
+          title: {
+            display: true,
+            text: 'Título do Gráfico',
           }
         }
       }

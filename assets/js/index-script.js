@@ -9,8 +9,21 @@ document.addEventListener('DOMContentLoaded', function () {
       .catch(error => console.error('Erro ao carregar a navbar:', error));
   });
 
-document.getElementById('toggleBtn').addEventListener('click', function () {
-    const sidebar = document.getElementById('sidebar');
-    sidebar.classList.toggle('active');
-  });
+let isMoved = false; 
+
+document.getElementById('toggleBtn').onclick = function() {
+  const sidebar = document.getElementById('sidebar');
+  sidebar.classList.toggle('active');
+
+  const content = document.getElementById('mainContent');
+  
+  if (isMoved) {
+      content.style.transform = 'translateX(0px)'; 
+  } else {
+      content.style.transform = 'translateX(200px)'; 
+  }
+  
+  isMoved = !isMoved; 
+};
+
 

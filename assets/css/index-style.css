@@ -1,3 +1,13 @@
+:root {
+  --laranja: #ff7300;
+  --laranja-claro: #ffb067;
+  --bege: #d6bc98;
+}
+
+body {
+  background-color:  white;
+}
+
 #sidebar {
   margin-top: 2%;
   width: 70px;
@@ -6,7 +16,8 @@
   position: fixed; 
   top: 0;
   left: 0;
-  z-index: 1; 
+  z-index: 1;
+  background-color: rgb(179, 176, 176);
 }
 
 #sidebar.active {
@@ -73,7 +84,7 @@
 }
 
 .custom-header {
-  background-color: black;
+  background-color: rgb(228, 228, 228);
   color: white;
   display: flex;
   justify-content: space-between;
@@ -85,10 +96,10 @@
 }
 
 .custom-header .search-input {
-  background-color: #3d3d3d;
+  background-color: white;
   border: none;
   border-radius: 20px;
-  color: white;
+  color: gray;
   padding: 5px 15px;
   width: 300px;
 }
@@ -123,26 +134,38 @@
 }
 
 .custom-header .greeting-text {
-  margin-right: 10px; /* Espaçamento entre o texto e a imagem */
-  color: white; /* Cor do texto */
-  font-size: 1rem; /* Tamanho da fonte */
+  margin-right: 10px; 
+  color: white; 
+  font-size: 1rem;
   display: flex;
-  align-items: center; /* Alinha verticalmente com o ícone do perfil */
+  align-items: center; 
 }
-
 
 
 main {
-  margin: 5% 2em 2em 5%;
+  margin: 5% 2em 2em 6%;
+
 }
+
+.main-content {
+  border-radius: 25px;
+  background-color: #f8f9fa;
+  transition: transform 0.3s ease; 
+}
+
 
 .grafico{
   border-radius: 5px;
-  background-color: beige;
-  width: 60%;
+  width: 40%;
+  padding: 2%;
+  border-radius: 10px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.281);
+  background-color: white;
 }
 
-
+canvas {
+  background-color: white;
+}
 
 /* Responsividade */
 @media (max-width: 1024px) {
