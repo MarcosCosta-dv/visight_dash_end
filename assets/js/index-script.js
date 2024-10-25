@@ -9,6 +9,17 @@ document.addEventListener('DOMContentLoaded', function () {
       .catch(error => console.error('Erro ao carregar a navbar:', error));
   });
 
+document.addEventListener('DOMContentLoaded', function () {
+  const navbarContainer = document.getElementById('header-container');
+  
+  fetch('assets/components/header.html')
+      .then(response => response.text())
+      .then(data => {
+          navbarContainer.innerHTML = data;
+      })
+      .catch(error => console.error('Erro ao carregar a header:', error));
+  });
+
 let isMoved = false; 
 
 document.getElementById('toggleBtn').onclick = function() {
